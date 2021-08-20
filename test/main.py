@@ -1,7 +1,0 @@
-print("Bonjour")
-print("Monsieur")
-print("Oui")
-print("non")
-print("si")
-print("Testing")
-print("Et oui Georges")
