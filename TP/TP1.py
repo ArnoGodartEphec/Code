@@ -74,6 +74,12 @@ def demander_age(nom_personne):
             print("ERREUR")
     return age_int
 
+# afficher les infos
+def afficher_informations(nom, age):
+        print("Vous etes: ", nom)
+        print(" Vous avez : ", age)
+
+
 # Demander le nom de 2 personnes
 nom1 = demander_nom()
 nom2= demander_nom()
@@ -82,11 +88,11 @@ nom2= demander_nom()
 age1 = demander_age(nom1)
 age2 = demander_age(nom2)
 
-print("Vous vous appelez " + nom1)
-print("Vous avez ", age1)
+# Demander infos
+afficher_informations(nom1, age1)
+afficher_informations(nom2, age2)
 
-print("Vous vous appelez " + nom2)
-print("Vous avez " , age2)
+
 
 
 
