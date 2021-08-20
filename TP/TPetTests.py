@@ -120,22 +120,27 @@ def afficher_informations(nom, age):
 # Demander le nom de 2 personnes
 #nom1 = demander_nom()
 #nom2= demander_nom()
-nom1 = "Tat"
-nom2 = "tit"
+
+#nom1 = "Tat"
+#nom2 = "tit"
 
 # Demander l'age de 2 personnes
-age1 = demander_age(nom1)
-age2 = demander_age(nom2)
+
+#age1 = demander_age(nom1)
+#age2 = demander_age(nom2)
 
 # Demander infos
-afficher_informations(nom1, age1)
-afficher_informations(nom2, age2)
+#afficher_informations(nom1, age1)
+#afficher_informations(nom2, age2)
 
+NB_PERSONNES = 3
 
-
-
-
-
+# Boucle for
+# Pour i de 0 à 5 
+for i in range(0, NB_PERSONNES):
+    nom = "personne" + str(i+1)
+    age = demander_age(nom)
+    afficher_informations(nom, age)
 
 
 
