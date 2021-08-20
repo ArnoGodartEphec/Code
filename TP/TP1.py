@@ -37,7 +37,7 @@ while not mot_de_passe == "TOTO":
     mot_de_passe = input(" Quel est le mdp ? ")
 print("Bien joué")
 """
-
+"""
 age = 0
 while age == 0:
     age_str = input(" Quel est votre age ? ")
@@ -52,4 +52,28 @@ print(" L'an prochain vous aurez " +  str(age + 1) + " ans ")
 nom = ""
 while nom == "":
     rep = input(" Quel est votre nom ? ")
+"""
 
+# Version avec fonctions
+
+def demander_age():
+    age_int = 0
+    while age_int == 0:
+        age_str = input(" Quel est votre age ? ")
+        try:
+            age_int = int(age_str)
+        except:
+            print("ERREUR")
+    return age_int
+
+age = demander_age()
+print(" Vous avez ", age, " ans ")
+
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom == "":
+        reponse_nom = input(" Quel est votre nom ? ")
+    return reponse_nom
+nom = demander_nom()
+print(" Vous vous appelez " + nom)
+    
