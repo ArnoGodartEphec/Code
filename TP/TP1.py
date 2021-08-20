@@ -56,26 +56,43 @@ while nom == "":
 
 # Version avec fonctions
 
-age = 0
-
-def demander_age():
-#dire que la var age est globale
-    global age
-    while age == 0:
-        age_str = input(" Quel est votre age ? ")
-        try:
-            age = int(age_str)
-        except:
-            print("ERREUR")
-
-demander_age()
-print(" Vous avez ", age, " ans ")
-
-nom = ""
 def demander_nom():
-    global nom
+    nom =""
     while nom == "":
         nom = input(" Quel est votre nom ? ")
-demander_nom()
-print(" Vous vous appelez " + nom)
+    return nom
+
+
+
+def demander_age(nom_personne):
+    age_int = 0
+    while age_int == 0:
+        age_str = input(nom_personne + " Quel est votre age ? ")
+        try:
+            age_int = int(age_str)
+        except:
+            print("ERREUR")
+    return age_int
+
+# Demander le nom de 2 personnes
+nom1 = demander_nom()
+nom2= demander_nom()
+
+# Demander l'age de 2 personnes
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+
+print("Vous vous appelez " + nom1)
+print("Vous avez ", age1)
+
+print("Vous vous appelez " + nom2)
+print("Vous avez " , age2)
+
+
+
+
+
+
+
+
     
