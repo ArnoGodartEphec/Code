@@ -93,9 +93,15 @@ def afficher_informations(nom, age):
     # age > 60 --> senior
     # age < 10 --> enfant
     # Attention à l'ordre des conditions    
-      
+    # Adolescent si age >= 12 et age < 18
+    # Bebe si age == 1 ou age == 2
+    
         if age == 17:
-            print("presque majeur ")  
+            print("presque majeur ")
+        elif 12 <= age < 18 :
+            print("Vous etes adolescent") 
+        elif age == 1 or age == 2:
+            print("Vous etes bebe") 
         elif age == 18:
             print("majeur tt pile bravo")
         elif age > 60:
