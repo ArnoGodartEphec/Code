@@ -76,13 +76,46 @@ def demander_age(nom_personne):
 
 # afficher les infos
 def afficher_informations(nom, age):
+        print()
         print("Vous etes: ", nom)
         print(" Vous avez : ", age)
 
+    # == egal
+    # <  inf
+    # <= inf ou egal
+    # > sup
+    # >= sup ou egal
+    # True / False
+
+    # age  == 17 --> presque majeur
+    # age  ==  --> majeur bravo
+    # elif = elseif
+    # age > 60 --> senior
+    # age < 10 --> enfant
+    # Attention à l'ordre des conditions    
+      
+        if age == 17:
+            print("presque majeur ")  
+        elif age == 18:
+            print("majeur tt pile bravo")
+        elif age > 60:
+            print("Vous etes senior")
+        elif age < 10:
+            print("Vous etes enfant")
+        elif age >= 18:
+            print("Vous etes majeur ")
+        else:
+            print("Vous etes mineur")
+
+       
+
+
 
 # Demander le nom de 2 personnes
-nom1 = demander_nom()
-nom2= demander_nom()
+#nom1 = demander_nom()
+#nom2= demander_nom()
+nom1 = "Tat"
+nom2 = "tit"
 
 # Demander l'age de 2 personnes
 age1 = demander_age(nom1)
