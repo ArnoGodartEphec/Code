@@ -1,2 +1,3 @@
 nom = "toto"
-print(nom)
+prenom = "tata"
+print(prenom + " " + nom)
