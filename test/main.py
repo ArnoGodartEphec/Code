@@ -1,0 +1,2 @@
+nom = "toto"
+print(nom)
