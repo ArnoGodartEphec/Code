@@ -80,9 +80,9 @@ def demander_age(nom_personne):
 def afficher_informations(nom, age, taille = 0):
         print()
         # Plusieurs façons d'écrire le print mais donnant le même résultat
-        print("Vous vous appelez : " + nom + ", vous avez" + str(age) + "ans")      # Classique en convertissant age en string
-        print(f"Vous vous appelez {nom}, vous avez {age} ans")                      # Avec un f devant la chaine
-        print("Vous vous appelez %s et vous avez %s ans" %(nom, age))                # Avec le % 
+        print("Vous vous appelez : " + nom + ", vous avez" + str(age) + "ans")      # Classique en convertissant age en string, chaine concaténée
+        print(f"Vous vous appelez {nom}, vous avez {age} ans")                      # Avec un f devant la chaine, chaine formatée
+        print("Vous vous appelez %s et vous avez %s ans" %(nom, age))                # Avec le % , vieux format
         
 
     # == egal
@@ -150,6 +150,17 @@ for i in range(0, NB_PERSONNES):
     nom = "personne" + str(i+1)
     age = demander_age(nom)
     afficher_informations(nom, age)
+
+
+print("""
+    Print
+        sur
+            plusieurs
+                niveaux
+
+""")
+
+print("toto", 20, "ans", "taille", 1.70)
 
 
 
