@@ -1,1 +1,1 @@
-# Développement Web II
+# Projet de Développement Web II - Snake
