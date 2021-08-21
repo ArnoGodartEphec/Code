@@ -75,10 +75,15 @@ def demander_age(nom_personne):
     return age_int
 
 # afficher les infos
-def afficher_informations(nom, age):
+# taille == 0 --> paramètres otpionnels
+
+def afficher_informations(nom, age, taille = 0):
         print()
-        print("Vous etes: ", nom)
-        print(" Vous avez : ", age)
+        # Plusieurs façons d'écrire le print mais donnant le même résultat
+        print("Vous vous appelez : " + nom + ", vous avez" + str(age) + "ans")      # Classique en convertissant age en string
+        print(f"Vous vous appelez {nom}, vous avez {age} ans")                      # Avec un f devant la chaine
+        print("Vous vous appelez %s et vous avez %s ans" %(nom, age))                # Avec le % 
+        
 
     # == egal
     # <  inf
@@ -113,6 +118,9 @@ def afficher_informations(nom, age):
         else:
             print("Vous etes mineur")
 
+    # afficher la taille 
+        if not taille == 0:
+            print("Votre taille" + str(taille) + " m")
        
 
 
@@ -133,15 +141,15 @@ def afficher_informations(nom, age):
 #afficher_informations(nom1, age1)
 #afficher_informations(nom2, age2)
 
-NB_PERSONNES = 3
 
 # Boucle for
-# Pour i de 0 à 5 
+# Pour i de 0 à à 3
+NB_PERSONNES = 1
+
 for i in range(0, NB_PERSONNES):
     nom = "personne" + str(i+1)
     age = demander_age(nom)
     afficher_informations(nom, age)
-
 
 
 
